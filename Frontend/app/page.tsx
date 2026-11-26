@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome to Next.js!</h1>
+    <div className="min-h-screen">
+      <h1 className="text-7xl font-extrabold text-primary font-jakarta">
+        Home
+      </h1>
     </div>
   );
 }
