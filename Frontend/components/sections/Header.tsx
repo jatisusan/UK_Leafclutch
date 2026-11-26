@@ -1,16 +1,13 @@
 import Link from "next/link";
 import MobileNavigation from "./MobileNavigation";
-
-export interface NavigationLink {
-  label: string;
-  href: string;
-}
+import Image from "next/image";
+import { Link as NavigationLink } from "@/types/content";
 
 interface HeaderProps {
   navigationLinks: NavigationLink[];
 }
 
-export const Header = ({ navigationLinks }: HeaderProps) => {
+const Header = ({ navigationLinks }: HeaderProps) => {
   return (
     <header className="w-full glass-blur sticky top-0 z-50">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
@@ -19,7 +16,15 @@ export const Header = ({ navigationLinks }: HeaderProps) => {
           href={"/"}
           aria-label={"Leafclutch Technologies home"}
           className="flex shrink-0 flex-col"
-        ></Link>
+        >
+          <Image
+            src={"/nav-logo.png"}
+            alt={"Leafclutch Technologies logo"}
+            width={120}
+            height={60}
+            className="h-auto w-auto"
+          />
+        </Link>
 
         {/* Desktop Navigation */}
         <nav

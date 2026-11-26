@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import type { NavigationLink } from "./Header";
+import type { Link as NavigationLink } from "@/types/content";
+import { ListIcon, XIcon } from "@phosphor-icons/react/dist/ssr";
 
 interface MobileNavigationProps {
   navigationLinks: NavigationLink[];
@@ -44,11 +45,7 @@ const MobileNavigation = ({ navigationLinks }: MobileNavigationProps) => {
         onClick={() => setIsOpen((previous) => !previous)}
         className="flex h-11 w-11 items-center justify-center rounded-md text-text-dark hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-primary"
       >
-        <span className="flex w-6 flex-col gap-1.5" aria-hidden="true">
-          <span className="h-0.5 w-full rounded bg-current" />
-          <span className="h-0.5 w-full rounded bg-current" />
-          <span className="h-0.5 w-full rounded bg-current" />
-        </span>
+        {isOpen ? <XIcon size={24} /> : <ListIcon size={24} />}
       </button>
 
       {/* Mobile Menu */}

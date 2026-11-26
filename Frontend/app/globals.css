@@ -8,32 +8,60 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-glacier-blue: #62a7ea;
   --font-inter: var(--font-inter);
   --font-jakarta: var(--font-plus-jakarta-sans);
 
-  --color-primary: #072069;
+  --color-primary: #0c1b48;
   --color-primary-dark: #0a2b85;
+   --color-accent: #11f60a;
 
   --color-text-dark: #111827;
   --color-text-medium: #4b5563;
   --color-text-light: #6b7280;
 }
 
+@utility flex-center {
+    @apply flex items-center justify-center;
+  }
+
+
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-2xl border border-transparent px-5 py-2 min-h-11 text-sm font-semibold hover:-translate-y-0.5 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center rounded-full border-2 border-transparent
+      px-5 py-2 min-h-11 text-sm font-semibold transition-all
+      motion-safe:hover:-translate-y-0.5
+      focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-dark
+      disabled:opacity-50 disabled:pointer-events-none;
   }
 
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary-dark focus:ring-primary-dark;
+    @apply bg-primary text-white;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-primary;
   }
 
   .btn-outline {
-    @apply border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary-dark;
+    @apply border-primary text-primary;
   }
 
   .glass-blur {
     @apply bg-white/20 backdrop-blur-md border-b border-white/10 shadow-sm;
+  }
+
+  .section-padding {
+    @apply px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24;
+  }
+
+  .section-inner {
+    @apply mx-auto max-w-6xl;
+  }
+
+  .hero-heading-text {
+    @apply text-4xl font-extrabold leading-tight tracking-wide sm:text-5xl lg:text-7xl;
   }
 }
 
