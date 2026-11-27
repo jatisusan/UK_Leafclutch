@@ -17,18 +17,22 @@ export function Reveal({ children, className, stagger = 0.1 }: RevealProps) {
       const mm = gsap.matchMedia();
 
       mm.add("(prefers-reduced-motion: no-preference)", () => {
-        gsap.from("[data-reveal]", {
-          y: 30,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power2.out",
-          stagger,
-          scrollTrigger: {
-            trigger: ref.current,
-            start: "top 85%",
-            toggleActions: "play none restart reverse",
-          },
-        });
+        const revealTargets =
+          ref.current?.querySelectorAll<HTMLElement>("[data-reveal]");
+        if (revealTargets?.length) {
+          gsap.from(revealTargets, {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            stagger,
+            scrollTrigger: {
+              trigger: ref.current,
+              start: "top 85%",
+              toggleActions: "play none restart reverse",
+            },
+          });
+        }
 
         gsap.utils.toArray<HTMLElement>("[data-split]").forEach((el) => {
           SplitText.create(el, {

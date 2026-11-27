@@ -86,10 +86,26 @@ export const mockHome: HomeContent = {
   ],
   process: {
     stages: [
-      { title: "First call", description: "Placeholder" },
-      { title: "Plan", description: "Placeholder" },
-      { title: "Build", description: "Placeholder" },
-      { title: "Handover", description: "Placeholder" },
+      {
+        title: "Discovery Phase",
+        description:
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        title: "Project Planning",
+        description:
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        title: "Development",
+        description:
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        title: "Final Delivery",
+        description:
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
     ],
     points: [],
   },

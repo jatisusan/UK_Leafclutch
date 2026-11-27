@@ -4,8 +4,7 @@ import Proof from "../components/sections/Proof";
 import Services from "@/components/sections/Services";
 import NotSure from "@/components/sections/NotSure";
 import Work from "@/components/sections/Work";
-
-
+import HowWeWork from "@/components/sections/HowWeWork";
 
 export default async function Home() {
   const homeContent = await getHome();
@@ -16,6 +15,7 @@ export default async function Home() {
       <Services services={homeContent.services} />
       <NotSure />
       <Work projects={homeContent.work} />
+      <HowWeWork {...homeContent.process} />
     </div>
   );
 }
