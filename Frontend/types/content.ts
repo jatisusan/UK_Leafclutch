@@ -63,7 +63,7 @@ export interface Testimonial {
   company: string;
 }
 
-export interface Faq {
+export interface FaqItem {
   question: string;
   answer: string;
 }
@@ -77,5 +77,5 @@ export interface HomeContent {
   process: Process;
   about: AboutContent;
   testimonials: Testimonial[];
-  faqs: Faq[];
+  faqs: FaqItem[];
 }
