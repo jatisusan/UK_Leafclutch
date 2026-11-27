@@ -7,6 +7,7 @@ import Work from "@/components/sections/Work";
 import HowWeWork from "@/components/sections/HowWeWork";
 import Faq from "@/components/sections/Faq";
 import Testimonials from "@/components/sections/Testimonials";
+import Footer from "@/components/ui/Footer";
 
 export default async function Home() {
   const homeContent = await getHome();
@@ -20,6 +21,7 @@ export default async function Home() {
       <HowWeWork {...homeContent.process} />
       <Testimonials testimonialItems={homeContent.testimonials} />
       <Faq faqItems={homeContent.faqs} />
+      <Footer />
     </div>
   );
 }
