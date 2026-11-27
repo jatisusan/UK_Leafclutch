@@ -1,5 +1,10 @@
 import type { HomeContent } from "@/types/content";
 
+import softwareDevIcon from "@/assets/software-development.svg";
+import webDevIcon from "@/assets/website-development.svg";
+import digitalMarketingIcon from "@/assets/digital-marketing.svg";
+import graphicDesignIcon from "@/assets/graphic-design.svg";
+
 export const mockHome: HomeContent = {
   seo: {
     title: "Placeholder title",
@@ -14,25 +19,56 @@ export const mockHome: HomeContent = {
     primaryCta: { label: "Discuss your project", href: "#contact" },
     secondaryCta: { label: "See our work", href: "#work" },
   },
-  proof: [],
+  proof: [
+    { value: "50+", label: "Projects completed" },
+    { value: "100+", label: "Happy clients" },
+    { value: "10+", label: "Expert team members" },
+  ],
   services: [
     {
       slug: "service-one",
-      title: "Placeholder service one",
-      intro: "Placeholder outcome-led text.",
-      icon: null,
+      title: "Software Development",
+      intro:
+        "Custom enterprise software, cloud applications, and automated workflow systems built to scale.",
+      icon: {
+        url: softwareDevIcon.src,
+        alt: "",
+        width: softwareDevIcon.width,
+        height: softwareDevIcon.height,
+      },
     },
     {
       slug: "service-two",
-      title: "Placeholder service two",
-      intro: "Placeholder outcome-led text.",
-      icon: null,
+      title: "Website Development",
+      intro: "High-performance, modern, and SEO-optimized corporate websites and web applications.",
+      icon: {
+        url: webDevIcon.src,
+        alt: "",
+        width: webDevIcon.width,
+        height: webDevIcon.height,
+      },
     },
     {
       slug: "service-three",
-      title: "Placeholder service three",
-      intro: "Placeholder outcome-led text.",
-      icon: null,
+      title: "Digital Marketing",
+      intro: "Data-driven marketing campaigns, social media management, and performance advertising.",
+      icon: {
+        url: digitalMarketingIcon.src,
+        alt: "",
+        width: digitalMarketingIcon.width,
+        height: digitalMarketingIcon.height,
+      },
+    },
+    {
+      slug: "service-four",
+      title: "Graphic Design",
+      intro: "Distinctive branding, visual identity, logos, print media, and digital creative assets.",
+      icon: {
+        url: graphicDesignIcon.src,
+        alt: "",
+        width: graphicDesignIcon.width,
+        height: graphicDesignIcon.height,
+      },
     },
   ],
   work: [
@@ -58,7 +94,7 @@ export const mockHome: HomeContent = {
     body: "Placeholder body",
     team: [],
   },
-  testimonials: [], 
+  testimonials: [],
   faqs: [
     { question: "Placeholder question one?", answer: "Placeholder answer." },
     { question: "Placeholder question two?", answer: "Placeholder answer." },
