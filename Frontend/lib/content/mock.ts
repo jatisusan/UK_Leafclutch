@@ -33,51 +33,55 @@ export const mockHome: HomeContent = {
       icon: {
         url: softwareDevIcon.src,
         alt: "",
-        width: softwareDevIcon.width,
-        height: softwareDevIcon.height,
       },
     },
     {
       slug: "service-two",
       title: "Website Development",
-      intro: "High-performance, modern, and SEO-optimized corporate websites and web applications.",
+      intro:
+        "High-performance, modern, and SEO-optimized corporate websites and web applications.",
       icon: {
         url: webDevIcon.src,
         alt: "",
-        width: webDevIcon.width,
-        height: webDevIcon.height,
       },
     },
     {
       slug: "service-three",
       title: "Digital Marketing",
-      intro: "Data-driven marketing campaigns, social media management, and performance advertising.",
+      intro:
+        "Data-driven marketing campaigns, social media management, and performance advertising.",
       icon: {
         url: digitalMarketingIcon.src,
         alt: "",
-        width: digitalMarketingIcon.width,
-        height: digitalMarketingIcon.height,
       },
     },
     {
       slug: "service-four",
       title: "Graphic Design",
-      intro: "Distinctive branding, visual identity, logos, print media, and digital creative assets.",
+      intro:
+        "Distinctive branding, visual identity, logos, print media, and digital creative assets.",
       icon: {
         url: graphicDesignIcon.src,
         alt: "",
-        width: graphicDesignIcon.width,
-        height: graphicDesignIcon.height,
       },
     },
   ],
   work: [
     {
+      id: "project-one",
       title: "Placeholder project",
       clientNeed: "Placeholder need",
       workDone: "Placeholder work",
       result: null,
-      images: [],
+      images: [{ url: "/hero-bg.webp", alt: "Placeholder image" }],
+    },
+    {
+      id: "project-two",
+      title: "Placeholder project",
+      clientNeed: "Placeholder need",
+      workDone: "Placeholder work",
+      result: null,
+      images: [{ url: "/hero-bg.webp", alt: "Placeholder image" }],
     },
   ],
   process: {

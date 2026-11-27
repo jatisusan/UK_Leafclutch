@@ -29,8 +29,8 @@ const Services = ({ services }: { services: Service[] }) => {
                   <Image
                     src={service.icon.url}
                     alt={service.icon.alt}
-                    width={service.icon.width}
-                    height={service.icon.height}
+                    width={100}
+                    height={100}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     unoptimized
                     className="h-full w-full object-contain p-5"

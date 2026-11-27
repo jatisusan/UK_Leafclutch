@@ -1,8 +1,6 @@
 export interface Img {
   url: string;
   alt: string;
-  width: number;
-  height: number;
 }
 
 export interface Link {
@@ -34,6 +32,7 @@ export interface Service {
 }
 
 export interface Project {
+  id: string;
   title: string;
   clientNeed: string;
   workDone: string;

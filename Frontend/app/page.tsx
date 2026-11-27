@@ -3,6 +3,9 @@ import { getHome } from "@/lib/content";
 import Proof from "../components/sections/Proof";
 import Services from "@/components/sections/Services";
 import NotSure from "@/components/sections/NotSure";
+import Work from "@/components/sections/Work";
+
+
 
 export default async function Home() {
   const homeContent = await getHome();
@@ -12,6 +15,7 @@ export default async function Home() {
       <Proof proofItems={homeContent.proof} />
       <Services services={homeContent.services} />
       <NotSure />
+      <Work projects={homeContent.work} />
     </div>
   );
 }
