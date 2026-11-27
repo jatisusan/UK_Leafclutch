@@ -114,7 +114,36 @@ export const mockHome: HomeContent = {
     body: "Placeholder body",
     team: [],
   },
-  testimonials: [],
+  testimonials: [
+    {
+      name: "John Doe",
+      role: "CEO",
+      company: "Acme Inc.",
+      image: { url: "/hero-bg.webp", alt: "John Doe" },
+      quote: "This is a placeholder testimonial.",
+    },
+    {
+      name: "John Doe",
+      role: "CEO",
+      company: "Acme Inc.",
+      image: { url: "/hero-bg.webp", alt: "John Doe" },
+      quote: "This is a placeholder testimonial.",
+    },
+    {
+      name: "John Doe",
+      role: "CEO",
+      company: "Acme Inc.",
+      image: { url: "/hero-bg.webp", alt: "John Doe" },
+      quote: "This is a placeholder testimonial.",
+    },
+    {
+      name: "John Doe",
+      role: "CEO",
+      company: "Acme Inc.",
+      image: { url: "/hero-bg.webp", alt: "John Doe" },
+      quote: "This is a placeholder testimonial.",
+    }
+  ],
   faqs: [
     { question: "Placeholder question one?", answer: "Placeholder answer." },
     { question: "Placeholder question two?", answer: "Placeholder answer." },

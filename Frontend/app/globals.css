@@ -15,7 +15,7 @@
 
   --color-primary: #0c1b48;
   --color-primary-dark: #0a2b85;
-   --color-accent: #11f60a;
+  --color-accent: #11f60a;
 
   --color-text-dark: #111827;
   --color-text-medium: #4b5563;
@@ -23,15 +23,14 @@
 }
 
 @utility flex-center {
-    @apply flex items-center justify-center;
-  }
-
+  @apply flex items-center justify-center;
+}
 
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center rounded-full border-2 border-transparent
       px-5 py-2 min-h-11 text-sm font-semibold transition-all
-      motion-safe:hover:-translate-y-0.5
+      hover:cursor-pointer motion-safe:hover:-translate-y-0.5
       focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-dark
       disabled:opacity-50 disabled:pointer-events-none;
   }
@@ -64,8 +63,6 @@
     @apply text-4xl font-extrabold leading-tight tracking-wide sm:text-5xl lg:text-7xl;
   }
 }
-
-
 
 body {
   background: var(--background);

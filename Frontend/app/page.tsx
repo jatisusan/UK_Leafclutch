@@ -6,6 +6,7 @@ import NotSure from "@/components/sections/NotSure";
 import Work from "@/components/sections/Work";
 import HowWeWork from "@/components/sections/HowWeWork";
 import Faq from "@/components/sections/Faq";
+import Testimonials from "@/components/sections/Testimonials";
 
 export default async function Home() {
   const homeContent = await getHome();
@@ -17,6 +18,7 @@ export default async function Home() {
       <NotSure />
       <Work projects={homeContent.work} />
       <HowWeWork {...homeContent.process} />
+      <Testimonials testimonialItems={homeContent.testimonials} />
       <Faq faqItems={homeContent.faqs} />
     </div>
   );

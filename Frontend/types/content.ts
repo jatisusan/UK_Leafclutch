@@ -56,11 +56,12 @@ export interface AboutContent {
   team: { name: string; role: string; photo: Img | null }[];
 }
 
-export interface Testimonial {
+export interface TestimonialItem {
   quote: string;
   name: string;
   role: string;
   company: string;
+  image: Img;
 }
 
 export interface FaqItem {
@@ -76,6 +77,6 @@ export interface HomeContent {
   work: Project[];
   process: Process;
   about: AboutContent;
-  testimonials: Testimonial[];
+  testimonials: TestimonialItem[];
   faqs: FaqItem[];
 }
