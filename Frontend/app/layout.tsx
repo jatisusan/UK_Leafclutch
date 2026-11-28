@@ -3,7 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { navigationLinks } from "@/constants/navigation";
 import Header from "@/components/sections/Header";
-import Footer from "@/components/ui/Footer";
+import Footer from "@/components/sections/Footer";
 
 const inter = Inter({
   subsets: ["latin"],

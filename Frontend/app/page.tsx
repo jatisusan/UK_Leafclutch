@@ -8,9 +8,29 @@ import Work from "@/components/sections/Work";
 import HowWeWork from "@/components/sections/HowWeWork";
 import Faq from "@/components/sections/Faq";
 import Testimonials from "@/components/sections/Testimonials";
+import About from "@/components/sections/About";
 
 import { getLandingPage } from "@/lib/content";
 import type { Section } from "@/types/content";
+
+export const aboutMock = {
+  leftPoints: [
+    "Based in Nepal",
+    "Working UK hours",
+    "Plain-English updates",
+    "You own your code",
+  ],
+  rightPoints: [
+    "Small, focused team",
+    "One point of contact",
+    "Secure by default",
+    "Clear handover",
+  ],
+  closingTitle: "Built in Nepal, for UK businesses",
+  closingText:
+    "We're a development team in Nepal. We work UK hours and keep you updated in plain English, from first call to handover.",
+};
+
 
 function renderSection(section: Section) {
   switch (section.key) {
@@ -26,13 +46,12 @@ function renderSection(section: Section) {
       return <Work data={section.data} />;
     case "process":
       return <HowWeWork data={section.data} />;
+    case "about":
+      return <About data={section.data} />;
     case "testimonials":
       return <Testimonials data={section.data} />;
     case "faqs":
       return <Faq data={section.data} />;
-    case "about":
-      // TODO: build About
-      return null;
     case "contact":
       // TODO: build Contact
       return null;
@@ -47,7 +66,6 @@ export default async function Home() {
       {page.sections.map((section) => (
         <Fragment key={section.key}>{renderSection(section)}</Fragment>
       ))}
-      
     </div>
   );
 }

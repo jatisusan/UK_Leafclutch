@@ -58,22 +58,40 @@ export const mockLanding: LandingPage = {
           {
             title: "Software",
             items: [
-              { title: "Custom software", summary: "Placeholder outcome-led summary." },
-              { title: "Workflow automation", summary: "Placeholder outcome-led summary." },
+              {
+                title: "Custom software",
+                summary: "Placeholder outcome-led summary.",
+              },
+              {
+                title: "Workflow automation",
+                summary: "Placeholder outcome-led summary.",
+              },
             ],
           },
           {
             title: "Websites",
             items: [
-              { title: "Business websites", summary: "Placeholder outcome-led summary." },
-              { title: "Web applications", summary: "Placeholder outcome-led summary." },
+              {
+                title: "Business websites",
+                summary: "Placeholder outcome-led summary.",
+              },
+              {
+                title: "Web applications",
+                summary: "Placeholder outcome-led summary.",
+              },
             ],
           },
           {
             title: "Marketing and design",
             items: [
-              { title: "Digital marketing", summary: "Placeholder outcome-led summary." },
-              { title: "Graphic design", summary: "Placeholder outcome-led summary." },
+              {
+                title: "Digital marketing",
+                summary: "Placeholder outcome-led summary.",
+              },
+              {
+                title: "Graphic design",
+                summary: "Placeholder outcome-led summary.",
+              },
             ],
           },
         ],
@@ -156,8 +174,11 @@ export const mockLanding: LandingPage = {
       type: "about",
       nav_label: "About",
       data: {
-        heading: "Placeholder about heading",
-        body: ["Placeholder paragraph one.", "Placeholder paragraph two."],
+        heading: "Built in Nepal, for UK businesses",
+        body: [
+          "We're a development team in Nepal. We work UK hours and keep you updated in plain English, from first call to handover.",
+          "Placeholder paragraph two.",
+        ],
         nav_label: "About",
         image: null,
       },
@@ -193,11 +214,26 @@ export const mockLanding: LandingPage = {
       data: {
         heading: "Frequently asked questions",
         items: [
-          { question: "Placeholder question one?", answer: "Placeholder answer." },
-          { question: "Placeholder question two?", answer: "Placeholder answer." },
-          { question: "Placeholder question three?", answer: "Placeholder answer." },
-          { question: "Placeholder question four?", answer: "Placeholder answer." },
-          { question: "Placeholder question five?", answer: "Placeholder answer." },
+          {
+            question: "Placeholder question one?",
+            answer: "Placeholder answer.",
+          },
+          {
+            question: "Placeholder question two?",
+            answer: "Placeholder answer.",
+          },
+          {
+            question: "Placeholder question three?",
+            answer: "Placeholder answer.",
+          },
+          {
+            question: "Placeholder question four?",
+            answer: "Placeholder answer.",
+          },
+          {
+            question: "Placeholder question five?",
+            answer: "Placeholder answer.",
+          },
         ],
       },
     },
@@ -210,8 +246,14 @@ export const mockLanding: LandingPage = {
         body: "One short line about getting in touch.",
         nav_label: "Contact",
         next_steps: [
-          { title: "We reply within 1 UK working day", body: "A real person reads every enquiry." },
-          { title: "A short first call", body: "We talk through what you need." },
+          {
+            title: "We reply within 1 UK working day",
+            body: "A real person reads every enquiry.",
+          },
+          {
+            title: "A short first call",
+            body: "We talk through what you need.",
+          },
         ],
         privacy_note: {
           text: "We only use your details to reply to your enquiry.",
