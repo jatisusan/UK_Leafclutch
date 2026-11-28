@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { StarIcon } from "@phosphor-icons/react/dist/ssr";
+import { StarIcon, UserIcon } from "@phosphor-icons/react/dist/ssr";
 import { useRef, useState } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import type { TestimonialItem } from "@/types/content";
@@ -101,15 +100,7 @@ const TestimonialList = ({
                   </blockquote>
 
                   <div className="mt-6 flex items-center gap-4 border-t border-primary/10 pt-5">
-                    <Image
-                      src={item.image.url}
-                      alt={item.image.alt}
-                      width={56}
-                      height={56}
-                      sizes="56px"
-                      unoptimized
-                      className="size-14 shrink-0 rounded-full object-cover"
-                    />
+                    <UserIcon size={32} />
                     <div className="min-w-0">
                       <p className="font-jakarta font-semibold text-primary">
                         {item.name}

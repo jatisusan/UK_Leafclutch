@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/sections/Header";
 import { navigationLinks } from "@/constants/navigation";
+import Header from "@/components/sections/Header";
+import Footer from "@/components/ui/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-background">
         <Header navigationLinks={navigationLinks} />
         {children}
+        <Footer />
       </body>
     </html>
   );

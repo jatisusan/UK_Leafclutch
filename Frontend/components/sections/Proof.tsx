@@ -4,10 +4,10 @@ import {
   ChartLineUpIcon,
   UsersThreeIcon,
 } from "@phosphor-icons/react/dist/ssr";
-import type { ProofFigure } from "@/types/content";
+import type { ProofData } from "@/types/content";
 
-const Proof = ({ proofItems }: { proofItems: ProofFigure[] }) => {
-  if (proofItems.length === 0) return null;
+const Proof = ({ data }: { data: ProofData }) => {
+  if (data.items.length === 0) return null;
 
   return (
     <section
@@ -16,7 +16,7 @@ const Proof = ({ proofItems }: { proofItems: ProofFigure[] }) => {
     >
       <div className="section-inner">
         <dl className="grid gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-          {proofItems.map((item, index) => {
+          {data.items.map((item, index) => {
             const label = item.label.toLowerCase();
             const Icon = label.includes("project")
               ? BriefcaseIcon
@@ -29,7 +29,7 @@ const Proof = ({ proofItems }: { proofItems: ProofFigure[] }) => {
             return (
               <div
                 key={`${item.label}-${index}`}
-                className="flex items-start gap-4 border-t border-white/15 pt-5"
+                className="flex items-center sm:justify-center gap-4 border-t border-white/15 pt-5"
               >
                 <span
                   aria-hidden="true"

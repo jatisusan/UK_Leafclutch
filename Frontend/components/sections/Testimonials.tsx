@@ -1,13 +1,9 @@
-import type { TestimonialItem } from "@/types/content";
+import type { TestimonialsData } from "@/types/content";
 import SectionHeading from "../ui/SectionHeading";
 import TestimonialList from "../ui/TestimonialList";
 
-const Testimonials = ({
-  testimonialItems,
-}: {
-  testimonialItems: TestimonialItem[];
-}) => {
-  if (testimonialItems.length === 0) return null;
+const Testimonials = ({ data }: { data: TestimonialsData }) => {
+  if (data.items.length === 0) return null;
 
   return (
     <section
@@ -16,8 +12,8 @@ const Testimonials = ({
       className="section-padding"
     >
       <div className="section-inner">
-        <SectionHeading badge="Testimonials" title="What our clients say" />
-        <TestimonialList testimonialItems={testimonialItems} />
+        <SectionHeading badge="Testimonials" title={data.heading} />
+        <TestimonialList testimonialItems={data.items} />
       </div>
     </section>
   );

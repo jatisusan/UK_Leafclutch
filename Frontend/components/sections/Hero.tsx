@@ -1,16 +1,10 @@
-import { HeroContent } from "@/types/content";
+import { HeroData } from "@/types/content";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "../ui/Reveal";
 
-const Hero = ({
-  headline,
-  subhead,
-  intro,
-  primaryCta,
-  secondaryCta,
-  note,
-}: HeroContent) => {
+const Hero = ({ data }: { data: HeroData }) => {
+  const { eyebrow, heading, body, primary_cta, secondary_cta } = data;
   return (
     <section
       aria-labelledby="hero-heading"
@@ -24,43 +18,37 @@ const Hero = ({
               data-split
               className="hero-heading-text uppercase text-primary"
             >
-              {headline}
+              {heading}
             </h1>
-
-            <h2 data-split className="hero-heading-text">
-              {subhead}
-            </h2>
 
             <p
               data-reveal
               className="mt-5 max-w-xl text-lg leading-relaxed text-text-medium"
             >
-              {intro}
+              {body}
             </p>
 
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <Link
-                href={primaryCta.href}
+                href={primary_cta.href}
                 data-enquire-location="hero"
                 className="btn btn-primary pl-5 pr-2 text-background"
               >
-                {primaryCta.label}
+                {primary_cta.label}
                 <span className="bg-background rounded-full inline-flex size-9 shrink-0 items-center justify-center ml-4">
                   <ArrowUpRightIcon size={18} className="text-primary" />
                 </span>
               </Link>
               <Link
-                href={secondaryCta.href}
+                href={secondary_cta.href}
                 className="btn btn-outline pl-5 pr-2"
               >
-                {secondaryCta.label}
+                {secondary_cta.label}
                 <span className="border-2 border-primary rounded-full inline-flex size-9 shrink-0 items-center justify-center ml-4">
                   <ArrowUpRightIcon size={18} className="text-primary" />
                 </span>
               </Link>
             </div>
-
-            {note && <p className="mt-6 text-sm text-text-medium">{note}</p>}
           </div>
         </Reveal>
       </div>

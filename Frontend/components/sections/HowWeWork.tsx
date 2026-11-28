@@ -1,8 +1,8 @@
-import { Process } from "@/types/content";
+import { ProcessData } from "@/types/content";
 import SectionHeading from "../ui/SectionHeading";
 import StageCards from "../ui/StageCards";
 
-const HowWeWork = ({ stages }: Process) => {
+const HowWeWork = ({ data }: { data: ProcessData }) => {
   return (
     <section className="section-padding">
       <div className="section-inner">
@@ -10,11 +10,11 @@ const HowWeWork = ({ stages }: Process) => {
           mode="light"
           align="center"
           badge="A process that works for you"
-          title="How We Work"
-          subtitle="A proven methodology that ensures project success."
+          title={data.heading}
+          subtitle={data.intro || undefined}
         />
 
-        <StageCards stages={stages} />
+        <StageCards stages={data.stages} />
       </div>
     </section>
   );

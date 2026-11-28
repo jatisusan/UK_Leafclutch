@@ -9,7 +9,7 @@ const SectionHeading = ({
 }: {
   badge?: string;
   title: string;
-  subtitle?: string;
+  subtitle?: string | null;
   align?: "left" | "center" | "right";
   mode?: "light" | "dark";
 }) => {

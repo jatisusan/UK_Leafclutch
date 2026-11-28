@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Project } from "@/types/content";
+import { WorkItem } from "@/types/content";
 import { Reveal } from "./Reveal";
 
-const FeaturedWorkList = ({ projects }: { projects: Project[] }) => {
+const FeaturedWorkList = ({ projects }: { projects: WorkItem[] }) => {
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
@@ -20,11 +20,9 @@ const FeaturedWorkList = ({ projects }: { projects: Project[] }) => {
               className="group relative border-b border-neutral-300 text-white"
             >
               <div className="grid grid-cols-1 items-start gap-y-4 py-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-0 sm:py-8">
-                {" "}
                 {/* Left: title + description */}
                 <div>
                   <h3 className="flex items-center text-xl font-semibold sm:min-h-24 sm:text-3xl lg:text-5xl">
-                    {" "}
                     <button
                       type="button"
                       aria-expanded={open}
@@ -45,18 +43,32 @@ const FeaturedWorkList = ({ projects }: { projects: Project[] }) => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <div className="space-y-4 pt-4 text-base">
+                      <div className="grid md:grid-cols-2 gap-4 pt-4 text-base">
+                        {p.client && (
+                          <p>
+                            <span className="block text-sm text-accent font-jakarta font-medium uppercase tracking-wide">
+                              The Client
+                            </span>
+                            {p.client}
+                          </p>
+                        )}
                         <p>
                           <span className="block text-sm text-accent font-jakarta font-medium uppercase tracking-wide">
-                            The need
+                            The Need
                           </span>
-                          {p.clientNeed}
+                          {p.client_need}
                         </p>
                         <p>
                           <span className="block text-sm text-accent font-jakarta font-medium uppercase tracking-wide">
-                            What we built
+                            What We Built
                           </span>
-                          {p.workDone}
+                          {p.built}
+                        </p>
+                        <p>
+                          <span className="block text-sm text-accent font-jakarta font-medium uppercase tracking-wide">
+                            Tech Stack
+                          </span>
+                          {p.technologies}
                         </p>
                         {p.result && (
                           <p>
@@ -79,8 +91,8 @@ const FeaturedWorkList = ({ projects }: { projects: Project[] }) => {
                   }`}
                 >
                   <Image
-                    src={p.images[0].url}
-                    alt={p.images[0].alt}
+                    src={p.images?.[0]?.url ?? "/hero-bg.webp"}
+                    alt={p.images?.[0]?.alt ?? "Project Image"}
                     fill
                     sizes="(min-width: 640px) 50vw, 100vw"
                     className="object-cover"

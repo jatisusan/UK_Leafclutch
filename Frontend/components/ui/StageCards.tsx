@@ -2,9 +2,9 @@
 
 import { useRef } from "react";
 import { useGSAP, gsap } from "@/lib/gsap";
-import { Stage } from "@/types/content";
+import { TitleBody } from "@/types/content";
 
-const StageCards = ({ stages }: { stages: Stage[] }) => {
+const StageCards = ({ stages }: { stages: TitleBody[] }) => {
   const listRef = useRef<HTMLOListElement>(null);
 
   useGSAP(
@@ -88,7 +88,7 @@ const StageCards = ({ stages }: { stages: Stage[] }) => {
             <h3 className="mt-6 text-2xl font-bold text-primary lg:text-4xl">
               {stage.title}
             </h3>
-            <p className="mt-3 text-text-medium">{stage.description}</p>
+            <p className="mt-3 text-text-medium">{stage.body}</p>
           </article>
         </li>
       ))}

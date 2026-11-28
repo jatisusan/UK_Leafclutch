@@ -1,6 +1,5 @@
-import { mockHome } from "./mock";
+import { mockLanding } from "./mock";
 
-export async function getHome() {
-  return mockHome;
+export async function getLandingPage() {
+  return mockLanding;
 }
-
